@@ -19,6 +19,8 @@ function Logo() {
   return <h1>🏝️ Far Away 🧳</h1>;
 }
 function Form() {
+  function submitButton() {}
+
   return (
     <form className="add-form">
       <h3>What do you need for your 😎 trip?</h3>
@@ -39,7 +41,7 @@ function PackingList() {
     <div className="list">
       <ul>
         {initialItems.map((item) => (
-          <Item item={item} />
+          <Item item={item} key={item.id} />
         ))}
       </ul>
     </div>
